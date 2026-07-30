@@ -1,26 +1,33 @@
 <html>
+  <head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-M26ZN1BC3L"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
 
-<head>
+      gtag("config", "G-M26ZN1BC3L");
+    </script>
 
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-M26ZN1BC3L"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+    <script type="text/javascript">
+      (function () {
+        var co = document.createElement("script");
+        co.type = "text/javascript";
+        co.async = true;
+        co.src = "https://staging.xola.com/checkout.js";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(co, s);
+      })();
+    </script>
+  </head>
 
-  gtag('config', 'G-M26ZN1BC3L');
-</script>
-
-
-
-<script type="text/javascript"> (function() { var co=document.createElement("script");
-     co.type="text/javascript"; co.async=true; co.src="https://staging.xola.com/checkout.js";
-     var s=document.getElementsByTagName("script")[0]; s.parentNode.insertBefore(co, s); })(); </script>
-</head>
-
-<body>
-  <div class="xola-checkout" data-seller="68592497b76cfaee140484b6" data-version="2" data-experience="693a15bf31bd15baad06f970"></div>
-</body>
-
+  <body>
+    <div class="xola-checkout" data-button-id="6a6ae0302e6344a34a0959df"></div>
+  </body>
 </html>
