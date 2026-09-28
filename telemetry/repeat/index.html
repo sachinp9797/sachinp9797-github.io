@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Telemetry test: repeated button</title>
+    <script type="text/javascript"> (function() { var co=document.createElement("script"); co.type="text/javascript"; co.async=true; co.src="https://staging.xola.com/checkout.js"; var s=document.getElementsByTagName("script")[0]; s.parentNode.insertBefore(co, s); })(); </script>
+  </head>
+
+  <body>
+    <h1>Same button three times</h1>
+    <p>Expect 1 B row, counted once per page load. checkout.js sends each id once.</p>
+    <div class="xola-checkout" data-button-id="68b1a8b55130b16d4e0afe7d" data-locale="auto"></div>
+    <div class="xola-checkout" data-button-id="68b1a8b55130b16d4e0afe7d" data-locale="auto"></div>
+    <div class="xola-checkout" data-button-id="68b1a8b55130b16d4e0afe7d" data-locale="auto"></div>
+    <p><a href="../">All test pages</a></p>
+  </body>
+</html>

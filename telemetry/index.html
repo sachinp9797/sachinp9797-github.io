@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Button telemetry test pages</title>
+    <style>
+      table { border-collapse: collapse; }
+      th, td { border: 1px solid #ccc; padding: 6px 10px; text-align: left; }
+    </style>
+  </head>
+
+  <body>
+    <h1>Button telemetry test pages</h1>
+    <p>
+      Every page loads staging checkout.js. The origin is recorded as <code>sachinp9797.github.io</code> and the path
+      is the page's pathname. Query strings and hashes are not sent.
+    </p>
+    <table>
+      <tr><th>Page</th><th>Embed</th><th>Expect</th></tr>
+      <tr><td><a href="button/">button/</a></td><td>button 68b1a8b55130b16d4e0afe7d</td><td>1 B row</td></tr>
+      <tr><td><a href="button/?utm_source=telemetry-hub">button/?utm_source=telemetry-hub</a></td><td>same page, with a query string</td><td>same row as button/</td></tr>
+      <tr><td><a href="experience/">experience/</a></td><td>experience 6aab01d653d2f284d80d3399</td><td>1 E row</td></tr>
+      <tr><td><a href="embedded/">embedded/</a></td><td>embedded checkout, experience 6aab01d653d2f284d80d3399</td><td>1 E row</td></tr>
+      <tr><td><a href="mixed/">mixed/</a></td><td>button + experience</td><td>2 rows (B and E) from one checkoutLinks call</td></tr>
+      <tr><td><a href="repeat/">repeat/</a></td><td>the same button three times</td><td>1 B row, counted once per page load</td></tr>
+      <tr><td><a href="../tours/kayak/sunset-paddle/">tours/kayak/sunset-paddle/</a></td><td>button, on a deep path</td><td>1 B row, separate from button/</td></tr>
+    </table>
+  </body>
+</html>
